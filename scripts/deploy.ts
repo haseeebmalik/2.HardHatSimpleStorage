@@ -1,4 +1,7 @@
-const { ethers,run,network } = require("hardhat")
+// const { ethers,run,network } = require("hardhat")
+//In ts you have to import like it.
+
+import { run, network, ethers } from "hardhat"
 async function main() {
     const SimpleStorageFactory = await ethers.getContractFactory(
         "SimpleStorage"
@@ -29,14 +32,14 @@ async function main() {
      console.log("updatedValue:",updatedValue)
 }
 //the args in parameter is constructor arguments if exist
-async function verify(contractAddress,args){
+async function verify(contractAddress:string,args:any[]){
    console.log("Verifying contract...")
    try {
     await run("verify:verify",{
         address:contractAddress,
         constructorArguments:args,
     })
-   } catch (err){
+   } catch (err:any){
     if(err.message.toLowerCase().includes("already varified")){
         console.log("Already Verified!")
     } else {
