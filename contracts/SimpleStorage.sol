@@ -50,7 +50,7 @@ contract SimpleStorage {
     //calldata, memory, storage
     function addPerson(string memory _name, uint256 _favouriteNumber) public {
         people.push(People(_favouriteNumber, _name));
-
+         
         //  or
 
         //   People memory newPerson=People({favouriteNumber:_favouriteNumber,name:_name});
