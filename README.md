@@ -75,6 +75,8 @@ we can also interect with any blockchain with hardhat console,by command:
    1.npx hardhat test (it will run all the tests in our test.deploy.js inside out test folder.)
    2.yarn hardhat test --grep store (it will run only test which have "store keyword in its sting before function")
    3.if we write only keyword with "it" like (it.only("test name",async function(){   }) (it will run only this test not the others) 
+
+  
       
    HARDHAT GAS REPORTER:
  Through this we can get the detail about how much gas our functions will cost,we will get this when we run tests.
