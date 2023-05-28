@@ -10,6 +10,6 @@ artifacts
 gas-reporter.txt
 coverage.json
 coverage
-
+.env
 
 
